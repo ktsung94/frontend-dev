@@ -9,8 +9,8 @@
 	</parent>
 	<artifactId>ch03</artifactId>
 	<packaging>war</packaging>
-	
-		<build>
+
+	<build>
 		<finalName>${artifactId}</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<resources>
@@ -21,24 +21,47 @@
 				</excludes>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>
-					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://192.168.1.109:8080/manager/text</url>
-					<path>/ch03</path>
+					<path>/${artifactId}</path>
 					<username>admin</username>
 					<password>admin</password>
 				</configuration>
-			</plugin>			
+			</plugin>
 		</plugins>
-	</build>	
-	
+	</build>
+
 </project>
