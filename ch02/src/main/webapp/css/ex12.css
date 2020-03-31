@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@import url("main.css");
+h1 {
+	color: #f00;
+}
