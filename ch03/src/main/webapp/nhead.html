@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	width: 630px;
+	height: 100px;
+	/*border: 1px solid #111;*/
+	margin: 50px auto 0;
+}
+
+.header .logo, .header .search-box {
+	float: left;
+}
+
+.header .logo {
+	/*border: 1px solid #333;*/
+	width: 200px;
+	height: 50px;
+	text-indent: 200px;
+	overflow : hidden;
+	background: url("images/naver.svg") no-repeat -2px -3px;
+}
+
+.header .search-box {
+	border: 3px solid #03CF5D;
+	width: 400px;
+	height: 45px;
+	margin-left: 20px;
+}
+
+.header .search-box a, .header .search-box button, .header .search-box input {
+	display: block;
+	float: right;
+}
+
+.search-box button {
+	width: 45px;
+	height: 45px;
+	background: #03CF5D url("images/naver.svg") no-repeat 13px -50px;
+	text-indent: -100px;
+	overflow : hidden;
+	border: 0;
+}
+
+.header .search-box input {
+	float: left;
+	height: 45px;
+	width: 280px;
+	border: none;
+	margin-left: 10px;
+	font-size: 20px;
+	outline: none;
+}
+
+.header .search-box a#drop-down {
+	width: 25px;
+	height: 45px;
+	background: url("images/naver.svg") no-repeat -80px -50px;
+	text-indent: -100px;
+	overflow : hidden;
+	margin-top: 10px;
+}
+
+.header .search-box a#keyboard {
+	width: 25px;
+	height: 45px;
+	background: url("images/naver.svg") no-repeat -30px -50px;
+	text-indent: -100px;
+	overflow : hidden;
+	margin-top: 7px;
+}
+
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1 class="logo">네이버</h1>
+		<div class="search-box">
+			<button>돋보기</button>
+			<a id="drop-down" href="#">드롭다운</a>
+			<a id="keyboard" href="#">키보드</a> 
+			<input type="text" /> 						
+		</div>
+	</div>
+</body>
+</html>
