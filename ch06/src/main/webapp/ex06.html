@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.addEventListener("load", function() {
+		var h1Element = document.createElement("h1");
+		var textNode = document.createTestNode("Hello DOM");
+		
+		h1Element.append(textNode);
+		
+		setTimeout(function() {
+			document.body.insert(h1Element);
+		});
+		document.body.appendChild(h1Element);
+	});
+</script>
+</head>
+<body>
+	<h1>HTML Element 만들기 01</h1>
+
+</body>
+</html>

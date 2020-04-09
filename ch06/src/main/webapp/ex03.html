@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	var s = "";	
+	for(property in location) {
+		s += (property + ":" + location[property] + "\n");
+	}
+	console.log(s);
+
+</script>
+</head>
+<body>
+	<h1>BOM(Browser Ojbect Model)</h1>
+	<h2>3. location 객체(주소창)</h2>
+	<h3>Refresh Page 하는 방법</h3>
+
+	<button onclick="location.href='http://www.douzone.com';">douzone home</button>
+	<br>
+
+	<!-- 방법1 -->
+	<button onclick="location = location;">refresh1</button>
+
+	<!-- 방법2 -->
+	<button onclick="location.href = location.href;">refresh2</button>
+
+	<!-- 방법3 -->
+	<button onclick="location.assign('');">refresh3</button>
+
+	<!-- 방법4 -->
+	<button onclick="location.replace(location);">refresh4</button>
+
+	<!-- 방법5 (캐시까지 지워주기 때문에 추천) -->
+	<button onclick="location.reload();">refresh5</button>
+</body>
+</html>
