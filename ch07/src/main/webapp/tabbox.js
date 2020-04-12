@@ -8,7 +8,6 @@ var TabBox = {
 	},	
 	_onWindowLoad: function(){
 		$('.tab-box li').removeClass('selected');
-		$(this).attr('class', 'selected');
-		$('.tab-view').text($(this).text() + "의 탭뷰 입니다.");
+		$('.tab-view').text($(this).attr('class', 'selected').text() + "의 탭뷰 입니다.");
 	}
 }
