@@ -25,6 +25,7 @@ var TabBox = {
 		$('.tab-box li.selected').removeClass('selected');
 
 		var $liTab = (this == TabBox) ?	$('.tab-box li:first-child') : $(this);
+		// html에 'data-no = ' 의 값을 가져온다.
 		$('.tab-box div').text($liTab.data('no') + "의 탭뷰입니다.");
 		$liTab.addClass('selected');
 	}	
